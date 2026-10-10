@@ -40,4 +40,7 @@ GPU坡/台阶扩展的可选航向反馈参照固定legged_gym的
 ## 已有机器人资产
 
 本项目原有 Unitree A1 资源来自 MuJoCo Menagerie；下载版本及哈希记录在
-`assets/unitree_a1/manifest.json`，资产目录保留其许可证。新地形课程不改变资产来源。
+根目录的 `assets-lock.json`；执行 `fetch_assets.py` 后还会生成
+`assets/unitree_a1/manifest.json` 并在资产目录保留其许可证。
+许可证副本也随源码公开于 [licenses/unitree_a1.txt](licenses/unitree_a1.txt)。
+机器人资产本身不纳入 Git，需按 README 获取。新地形课程不改变资产来源。
