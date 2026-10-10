@@ -1,0 +1,104 @@
+{
+  "verified_on": "2026-10-10",
+  "sources": [
+    {
+      "repo": "https://github.com/leggedrobotics/legged_gym",
+      "commit": "8fa29acc6fd1910c3d9659eef6310bdd301cde0a",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f36c4ad35354a621816d7f0b74b6355b5025a23b5f5a5cb1fbe9db29468816ad",
+          "url": "https://github.com/leggedrobotics/legged_gym/blob/8fa29acc6fd1910c3d9659eef6310bdd301cde0a/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "93213abd7c2b1ad2fc70fe08dab8831c7daa0fba5f4d167c6ed4200c7afad67e",
+          "url": "https://github.com/leggedrobotics/legged_gym/blob/8fa29acc6fd1910c3d9659eef6310bdd301cde0a/LICENSE"
+        },
+        {
+          "path": "legged_gym/envs/a1/a1_config.py",
+          "sha256": "8db0de4f55ab158beb4a1f8012e482d3a4d910ff398039925925c2fbb6806859",
+          "url": "https://github.com/leggedrobotics/legged_gym/blob/8fa29acc6fd1910c3d9659eef6310bdd301cde0a/legged_gym/envs/a1/a1_config.py"
+        },
+        {
+          "path": "legged_gym/envs/base/legged_robot.py",
+          "sha256": "4a18d6100c60ef203bdb0029f8232730b56f0868fbc7f9ed588d957ce714e457",
+          "url": "https://github.com/leggedrobotics/legged_gym/blob/8fa29acc6fd1910c3d9659eef6310bdd301cde0a/legged_gym/envs/base/legged_robot.py"
+        },
+        {
+          "path": "legged_gym/envs/base/legged_robot_config.py",
+          "sha256": "287349b0e7db62598c0614c2f2bf212192022ce0698dd4839bb9de8dfc013faa",
+          "url": "https://github.com/leggedrobotics/legged_gym/blob/8fa29acc6fd1910c3d9659eef6310bdd301cde0a/legged_gym/envs/base/legged_robot_config.py"
+        },
+        {
+          "path": "legged_gym/utils/terrain.py",
+          "sha256": "7896822515f977f32813f1aedc65dc001dd2e72ce4c5516922516792d99c9ab0",
+          "url": "https://github.com/leggedrobotics/legged_gym/blob/8fa29acc6fd1910c3d9659eef6310bdd301cde0a/legged_gym/utils/terrain.py"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/Improbable-AI/walk-these-ways",
+      "commit": "0e7236bdc81ce855cbe3d70345a7899452bdeb1c",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "73066ea4cbe4ab220b32782ad345f29d3478d3e83ef5af37c0dae36b1805a106",
+          "url": "https://github.com/Improbable-AI/walk-these-ways/blob/0e7236bdc81ce855cbe3d70345a7899452bdeb1c/README.md"
+        },
+        {
+          "path": "go1_gym/envs/base/curriculum.py",
+          "sha256": "325e66403c00213ee0e19359c9599e8cab290ed3f2b280bcfc53045e23910dfe",
+          "url": "https://github.com/Improbable-AI/walk-these-ways/blob/0e7236bdc81ce855cbe3d70345a7899452bdeb1c/go1_gym/envs/base/curriculum.py"
+        },
+        {
+          "path": "go1_gym/envs/base/legged_robot_config.py",
+          "sha256": "40d4e41999f88268e49afca3058113667b76bec36d7f7c2222e86d89d802dff2",
+          "url": "https://github.com/Improbable-AI/walk-these-ways/blob/0e7236bdc81ce855cbe3d70345a7899452bdeb1c/go1_gym/envs/base/legged_robot_config.py"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/Improbable-AI/rapid-locomotion-rl",
+      "commit": "f5143ef940e934849c00284e34caf164d6ce7b6e",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f5a2183bfc5d64fbf79ed2cfcb8a8ed44df3c2aa6d91959fd74314c8d1ff8ddf",
+          "url": "https://github.com/Improbable-AI/rapid-locomotion-rl/blob/f5143ef940e934849c00284e34caf164d6ce7b6e/README.md"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/google-deepmind/mujoco_playground",
+      "commit": "d59156e099a8785dd58fbce2e25a6ee1f7b5800c",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "b676389606a4e6ddff3c2e3dd15118de443290ec404c699954e7df39190532fd",
+          "url": "https://github.com/google-deepmind/mujoco_playground/blob/d59156e099a8785dd58fbce2e25a6ee1f7b5800c/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+          "url": "https://github.com/google-deepmind/mujoco_playground/blob/d59156e099a8785dd58fbce2e25a6ee1f7b5800c/LICENSE"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "9a5b9808d19ec5a9d0a2190be19eda54955e2bc9d76afa28908e3bfa6d07a2c2",
+          "url": "https://github.com/google-deepmind/mujoco_playground/blob/d59156e099a8785dd58fbce2e25a6ee1f7b5800c/pyproject.toml"
+        },
+        {
+          "path": "mujoco_playground/_src/locomotion/go1/joystick.py",
+          "sha256": "b5a13b86277f6f70abe5f6610fdc622a224098022fa4b218c25e49364b13fe7f",
+          "url": "https://github.com/google-deepmind/mujoco_playground/blob/d59156e099a8785dd58fbce2e25a6ee1f7b5800c/mujoco_playground/_src/locomotion/go1/joystick.py"
+        },
+        {
+          "path": "mujoco_playground/config/locomotion_params.py",
+          "sha256": "8988a508c3dcb4725f9b85ece1652c0a067cc9badc673ba2086541925a5fc970",
+          "url": "https://github.com/google-deepmind/mujoco_playground/blob/d59156e099a8785dd58fbce2e25a6ee1f7b5800c/mujoco_playground/config/locomotion_params.py"
+        }
+      ]
+    }
+  ]
+}

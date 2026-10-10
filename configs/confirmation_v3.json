@@ -1,0 +1,13 @@
+[
+  {"name":"nominal","parameters":[0.76,0.2,1.01],"command":[0.48,0.0,0.0]},
+  {"name":"turning","parameters":[0.83,1.1,1.07],"command":[0.52,0.03,0.18]},
+  {"name":"low_friction","parameters":[0.31,0.4,1.02],"command":[0.43,0.0,0.0]},
+  {"name":"payload","parameters":[0.63,2.7,0.96],"command":[0.42,0.0,0.0]},
+  {"name":"weak_motor","parameters":[0.69,0.5,0.73],"command":[0.38,0.0,0.0]},
+  {"name":"combination","parameters":[0.34,2.3,0.77],"command":[0.33,0.0,0.0]},
+  {"name":"friction_switch","parameters":[0.77,0.5,1.01],"command":[0.43,0.0,0.0],"change_step":300,"after_parameters":[0.31,0.5,1.01]},
+  {"name":"motor_switch","parameters":[0.72,0.6,1.02],"command":[0.38,0.0,0.0],"change_step":300,"after_parameters":[0.72,0.6,0.73]},
+  {"name":"payload_switch","parameters":[0.67,0.3,0.98],"command":[0.42,0.0,0.0],"change_step":300,"after_parameters":[0.67,2.7,0.98]},
+  {"name":"lateral_push","parameters":[0.76,0.2,1.01],"command":[0.48,0.0,0.0],"push_step":320,"push_steps":5,"push_force":[0.0,42.0,0.0]},
+  {"name":"extrapolation","parameters":[0.23,3.2,0.63],"command":[0.32,0.0,0.0]}
+]

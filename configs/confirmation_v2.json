@@ -1,0 +1,11 @@
+[
+  {"name":"confirm_nominal","parameters":[0.72,0.4,1.03],"command":[0.5,0.0,0.0]},
+  {"name":"confirm_turn","parameters":[0.88,1.2,0.98],"command":[0.55,-0.04,-0.15]},
+  {"name":"confirm_low_friction","parameters":[0.28,0.3,1.04],"command":[0.45,0.0,0.0]},
+  {"name":"confirm_payload","parameters":[0.68,2.8,0.97],"command":[0.45,0.0,0.0]},
+  {"name":"confirm_weak_motor","parameters":[0.65,0.4,0.72],"command":[0.4,0.0,0.0]},
+  {"name":"confirm_combination","parameters":[0.32,2.4,0.76],"command":[0.35,0.0,0.0]},
+  {"name":"confirm_switch","parameters":[0.78,0.4,1.02],"command":[0.45,0.0,0.0],"change_step":300,"after_parameters":[0.28,0.4,1.02]},
+  {"name":"confirm_push","parameters":[0.72,0.4,1.03],"command":[0.5,0.0,0.0],"push_step":350,"push_steps":5,"push_force":[0.0,-45.0,0.0]},
+  {"name":"confirm_extrapolation","parameters":[0.22,3.3,0.62],"command":[0.35,0.0,0.0]}
+]

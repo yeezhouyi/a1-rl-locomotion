@@ -1,0 +1,42 @@
+{
+  "a1.xml": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/a1.xml",
+    "sha256": "492978cb7700b0064bcefbc2b93dba651a828cf9212df91d56e951666890807c"
+  },
+  "scene.xml": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/scene.xml",
+    "sha256": "415eb95e2982c5a90c873f10d45e3efee94186ef6050e2c9aaea40135ff569ad"
+  },
+  "LICENSE": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/LICENSE",
+    "sha256": "2b794acf1e250f5545ae5a47d81e5685ea5488ce077d1087ed8be5f81e9ba5c0"
+  },
+  "README.md": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/README.md",
+    "sha256": "b470a3cbf0358dc183edb905cbd430f73db8f4a6fa1d30d040194293c6eeaa53"
+  },
+  "assets/calf.obj": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/assets/calf.obj",
+    "sha256": "76e4c432d597a15e02d2afd31410b143f421a1d67bc86d7f3802dc6f391f0a1e"
+  },
+  "assets/hip.obj": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/assets/hip.obj",
+    "sha256": "db1c7bf190915376e78f7d50ea2ab3b625d1b6edd02ec2ed0d02d7c1e195aabb"
+  },
+  "assets/thigh.obj": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/assets/thigh.obj",
+    "sha256": "9146a38aeb231b253f5fc132168ae6ce7485502bc6b6fad3d8af088724c620b9"
+  },
+  "assets/thigh_mirror.obj": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/assets/thigh_mirror.obj",
+    "sha256": "03cca79a14e307d00aa303d64dc364f4e62ca16138d58f9789f4e17be3dd2f58"
+  },
+  "assets/trunk.obj": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/assets/trunk.obj",
+    "sha256": "c29e82d0addb4c7e0f02b59057fccc53e9b6f2b149d4140cc2644712a39b8878"
+  },
+  "assets/trunk_A1.png": {
+    "source": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_a1/assets/trunk_A1.png",
+    "sha256": "512e8cfa5ebedfc4199afe172590d3d486461e42244ab5d439020111f9fc7e78"
+  }
+}

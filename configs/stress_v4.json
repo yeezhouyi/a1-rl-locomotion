@@ -1,0 +1,10 @@
+[
+  {"name":"clean","parameters":[0.72,0.4,1.03],"command":[0.48,0.02,0.1]},
+  {"name":"noise_1x","parameters":[0.72,0.4,1.03],"command":[0.48,0.02,0.1],"sensor_noise_scale":1},
+  {"name":"noise_2x","parameters":[0.72,0.4,1.03],"command":[0.48,0.02,0.1],"sensor_noise_scale":2},
+  {"name":"delay_20ms","parameters":[0.72,0.4,1.03],"command":[0.48,0.02,0.1],"sensor_delay_steps":1},
+  {"name":"delay_40ms","parameters":[0.72,0.4,1.03],"command":[0.48,0.02,0.1],"sensor_delay_steps":2},
+  {"name":"noise_delay","parameters":[0.72,0.4,1.03],"command":[0.48,0.02,0.1],"sensor_noise_scale":1,"sensor_delay_steps":2},
+  {"name":"weak_load","parameters":[0.48,2.4,0.77],"command":[0.42,-0.03,-0.12]},
+  {"name":"switch_noise_delay","parameters":[0.78,0.7,1.04],"command":[0.48,0.02,0.1],"change_step":350,"after_parameters":[0.28,0.7,1.04],"sensor_noise_scale":1,"sensor_delay_steps":1}
+]

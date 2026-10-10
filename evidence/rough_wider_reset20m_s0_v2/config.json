@@ -1,0 +1,120 @@
+{
+  "arguments": {
+    "assets": "<GPU_WORKSPACE>/a1_assets_v2",
+    "out": "<GPU_WORKSPACE>/runs/rough_wider_reset20m_s0_v2",
+    "batch": 1024,
+    "steps": 20000000,
+    "minibatch_size": 128,
+    "seed": 0,
+    "restore": "<GPU_WORKSPACE>/runs/rough_rewardv2_10m_capacity320/checkpoints/000010035200",
+    "reset_range": 3.0,
+    "terrain": "rough",
+    "reward_profile": "locomotion_v2"
+  },
+  "train": {
+    "num_timesteps": 20000000,
+    "num_evals": 3,
+    "num_envs": 1024,
+    "num_eval_envs": 16,
+    "episode_length": 1000,
+    "action_repeat": 1,
+    "unroll_length": 20,
+    "num_minibatches": 8,
+    "num_updates_per_batch": 4,
+    "batch_size": 128,
+    "discounting": 0.97,
+    "learning_rate": 0.0003,
+    "entropy_cost": 0.01,
+    "normalize_observations": true,
+    "reward_scaling": 1.0,
+    "max_grad_norm": 1.0,
+    "num_resets_per_eval": 1
+  },
+  "env": {
+    "Kd": 0.8,
+    "Kp": 30.0,
+    "action_repeat": 1,
+    "action_scale": 0.5,
+    "command_config": {
+      "a": [
+        0.8,
+        0.2,
+        0.5
+      ],
+      "b": [
+        0.9,
+        0.25,
+        0.5
+      ]
+    },
+    "ctrl_dt": 0.02,
+    "episode_length": 1000,
+    "history_len": 1,
+    "impl": "warp",
+    "naconmax": 49152,
+    "njmax": 320,
+    "noise_config": {
+      "level": 1.0,
+      "scales": {
+        "gravity": 0.05,
+        "gyro": 0.2,
+        "joint_pos": 0.03,
+        "joint_vel": 1.5,
+        "linvel": 0.1
+      }
+    },
+    "pert_config": {
+      "enable": false,
+      "kick_durations": [
+        0.05,
+        0.2
+      ],
+      "kick_wait_times": [
+        1.0,
+        3.0
+      ],
+      "velocity_kick": [
+        0.0,
+        3.0
+      ]
+    },
+    "reset_xy_range": 3.0,
+    "reward_config": {
+      "max_foot_height": 0.1,
+      "scales": {
+        "action_rate": -0.01,
+        "ang_vel_xy": -0.05,
+        "dof_pos_limits": -1.0,
+        "energy": -0.001,
+        "feet_air_time": 0.3,
+        "feet_clearance": -0.5,
+        "feet_height": -0.2,
+        "feet_slip": -0.1,
+        "lin_vel_z": -0.5,
+        "orientation": -5.0,
+        "pose": 0.1,
+        "stand_still": -1.0,
+        "termination": -1.0,
+        "torques": -0.0002,
+        "tracking_ang_vel": 1.0,
+        "tracking_lin_vel": 3.0
+      },
+      "tracking_sigma": 0.1
+    },
+    "sim_dt": 0.004,
+    "soft_joint_pos_limit_factor": 0.95
+  },
+  "backend": "gpu",
+  "versions": {
+    "jax": "0.8.2",
+    "mujoco": "3.15.0",
+    "mujoco-mjx": "3.15.0",
+    "brax": "0.14.2",
+    "warp-lang": "1.18.0"
+  },
+  "source_sha256": {
+    "train_gpu_a1.py": "064033b9395cd4303aff761e1e5ccf0006133fa8fd6f32d2d59ce78d684dcb9c",
+    "gpu_a1_env.py": "60bb63fd3c3456685b811fedc420c40d29dad24081a5fbaefaf6c55b948e2cc9"
+  },
+  "note": "Single seed new GPU A1 task; upstream reward/observation, not original RMA. Restore, when specified, reloads parameters/normalization but restarts optimizer."
+}

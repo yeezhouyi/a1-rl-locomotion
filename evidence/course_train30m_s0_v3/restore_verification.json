@@ -1,0 +1,6 @@
+{
+  "checkpoint": "<GPU_WORKSPACE>/runs/course_train30m_s0_v3/checkpoints/000030003200",
+  "max_action_absolute_error": 0.0,
+  "passed": true,
+  "observations": 8
+}

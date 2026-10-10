@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rma-quadruped"
+version = "0.1.0"
+description = "Local A1 locomotion and RMA core-method reproduction"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "torch>=2.8", "mujoco==3.3.5", "gymnasium==1.2.0", "matplotlib>=3.8", "imageio[ffmpeg]>=2.37"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

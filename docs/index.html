@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Unitree A1 强化学习仿真项目：PPO、RMA 核心实现、GPU 并行训练、台阶与坡地评估。">
+  <title>A1 · 强化学习运动控制</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101519;--card:#192127;--ink:#eff4f6;--muted:#aebfc8;--accent:#b4ec91;--line:#344149}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Microsoft YaHei",sans-serif}
+    main{max-width:1100px;margin:auto;padding:54px 24px 36px}a{color:var(--accent);text-underline-offset:4px}.eyebrow{color:var(--accent);font-size:13px;letter-spacing:.18em}
+    h1{font-size:clamp(30px,5.5vw,58px);line-height:1.16;margin:18px 0}h2{font-size:23px;margin:0 0 14px}p{margin:0 0 18px}.lead{max-width:820px;color:var(--muted);font-size:18px}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}.links a{padding:9px 16px;border:1px solid var(--line);border-radius:7px;text-decoration:none}.links a:first-child{background:var(--accent);color:#152018;border-color:var(--accent);font-weight:650}
+    .player{margin:30px 0 14px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#080c0e}video{display:block;width:100%;aspect-ratio:16/9}.caption{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:23px}.metric{display:block;font-size:32px;line-height:1.25;color:var(--accent);font-weight:650;margin-bottom:10px}.card p{margin:0;color:var(--muted);font-size:14px}
+    section{border-top:1px solid var(--line);padding:28px 0}ul{padding-left:22px;color:var(--muted)}li{margin-bottom:9px}strong{color:var(--ink)}.notice{border-left:3px solid var(--accent);padding:2px 0 2px 18px;color:var(--muted);margin:20px 0}footer{color:var(--muted);font-size:13px;padding-top:24px}
+    @media(max-width:650px){main{padding:32px 18px}.grid{grid-template-columns:1fr;gap:10px}.card{padding:18px}.metric{font-size:28px}}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">UNITREE A1 / REINFORCEMENT LEARNING / SIMULATION</div>
+  <h1>从强化学习策略<br>到完整地形穿越</h1>
+  <p class="lead">独立实现 CPU PPO / RMA 核心链路，借鉴 MuJoCo Playground 与 Brax 扩展 GPU 并行训练。在 A1 仿真中验证台阶、上下坡、变速停走和转向，并保留对照实验与失败边界。</p>
+  <nav class="links" aria-label="项目链接">
+    <a href="https://github.com/yeezhouyi/a1-rl-locomotion">查看源码</a>
+    <a href="https://github.com/yeezhouyi/a1-rl-locomotion/releases/tag/v1.0-demo">下载模型与视频</a>
+    <a href="https://github.com/yeezhouyi/a1-rl-locomotion/blob/main/docs/gpu_course_results.md">查看实验报告</a>
+  </nav>
+  <div class="player"><video controls playsinline preload="metadata" poster="media/slope.jpg" aria-label="A1 地形穿越演示">
+    <source src="https://github.com/yeezhouyi/a1-rl-locomotion/releases/download/v1.0-demo/A1_terrain_demo.mp4" type="video/mp4">
+    您的浏览器不支持视频，请从上方链接下载。
+  </video></div>
+  <p class="caption">90 秒 · 720p · 原速回放。四段任务各保留完整 20 秒，画面显示指令与实际速度；控制方式为 PPO 速度策略＋高层航向反馈。</p>
+  <div class="grid">
+    <div class="card"><span class="metric">6 × 3.5 cm</span><strong>台阶与缓坡</strong><p>六级真实碰撞台阶，最高 21 cm；上下坡角度 6.84°，最高 24 cm。</p></div>
+    <div class="card"><span class="metric">8 / 8</span><strong>固定地形保留集达标</strong><p>旧模型和专门续训模型在同一航向反馈条件下均达标。小规模单种子结果。</p></div>
+    <div class="card"><span class="metric">1,155</span><strong>CPU 多种子评估回合</strong><p>3 种子 × 7 方法 × 11 场景；另有 432 回合传感器与优化压力测试。</p></div>
+  </div>
+  <section><h2>实现了哪些强化学习工作</h2><ul>
+    <li><strong>算法实现：</strong>CPU PPO / GAE、特权教师、历史适应器、域随机化，以及固定/零隐变量、打乱历史对照。</li>
+    <li><strong>训练工程：</strong>复用 Brax PPO 与固定版本 Playground，完成 A1 观测、PD 控制、地形碰撞和检查点恢复适配。RTX 4060 Laptop 上同步 1,024 环境约 31,585 控制步/秒，仅统计仿真 rollout。</li>
+    <li><strong>实验诊断：</strong>粗糙新空间直接迁移 1/8，追加训练后 7/8，仍有一次跌倒；使用固定评估协议与完整轨迹记录分析失败。</li>
+  </ul></section>
+  <section><h2>结果边界</h2>
+    <p class="notice">这是仿真项目，没有真机部署。GPU 策略未加入 RMA 历史适应器；高层反馈读取仿真 yaw / xy，不代表自主导航。CPU 多种子实验尚未证明 RMA 稳定优于基线。</p>
+    <p class="caption">地形达标要求：完整 20 秒、无跌倒或越界、最终 x ≥ 6 m、平面速度向量 RMSE &lt; 0.2 m/s、yaw-rate RMSE &lt; 0.3 rad/s。纯 yaw-rate 开发集仅 4/8 达标；不能把反馈的效果归因于专门续训，也不能声称续训提高地形通过率。视频采用各场景首个达标回合，全部保留集指标已公开。</p>
+    <a href="https://github.com/yeezhouyi/a1-rl-locomotion/tree/main/evidence">查看指标与测量记录 →</a>
+  </section>
+  <section><h2>迁移对照视频</h2>
+    <div class="player"><video controls playsinline preload="none" poster="media/stairs.jpg" aria-label="A1 迁移对照演示">
+      <source src="https://github.com/yeezhouyi/a1-rl-locomotion/releases/download/v1.0-demo/A1_transfer_comparison.mp4" type="video/mp4">
+    </video></div>
+    <p class="caption">旧粗糙地形模型与专门续训模型，在相同高层反馈下比较。该保留集两者均为 8/8；视频不构成等预算算法优势证明。</p>
+  </section>
+  <footer>yeezhouyi · 原创代码 MIT；上游代码与机器人资产分别保留其许可证。复跑入口、固定上游版本和实验限制均见仓库 README。</footer>
+</main></body></html>

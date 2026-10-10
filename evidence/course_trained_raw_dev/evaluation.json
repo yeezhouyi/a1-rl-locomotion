@@ -1,0 +1,219 @@
+{
+  "episodes": [
+    {
+      "scenario": "stairs_straight",
+      "seed": 127000,
+      "steps": 335,
+      "fell": false,
+      "out_of_bounds": true,
+      "velocity_rmse": 0.211612731218338,
+      "yaw_rmse": 0.2659834921360016,
+      "final_x": 1.1788276433944702,
+      "initial_x": -1.3,
+      "final_y": -4.104979991912842,
+      "crossed_obstacles": false,
+      "tracking_success": false
+    },
+    {
+      "scenario": "stairs_straight",
+      "seed": 127001,
+      "steps": 330,
+      "fell": false,
+      "out_of_bounds": true,
+      "velocity_rmse": 0.20776531100273132,
+      "yaw_rmse": 0.2787798345088959,
+      "final_x": 1.203284502029419,
+      "initial_x": -1.3,
+      "final_y": -4.102964401245117,
+      "crossed_obstacles": false,
+      "tracking_success": false
+    },
+    {
+      "scenario": "stairs_stop_resume",
+      "seed": 127002,
+      "steps": 1000,
+      "fell": false,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.0705031007528305,
+      "yaw_rmse": 0.07064326852560043,
+      "final_x": 7.2840352058410645,
+      "initial_x": -1.3,
+      "final_y": -3.445993661880493,
+      "crossed_obstacles": true,
+      "tracking_success": true
+    },
+    {
+      "scenario": "stairs_stop_resume",
+      "seed": 127003,
+      "steps": 1000,
+      "fell": false,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.07015136629343033,
+      "yaw_rmse": 0.07014778256416321,
+      "final_x": 7.291482448577881,
+      "initial_x": -1.3,
+      "final_y": -3.367927312850952,
+      "crossed_obstacles": true,
+      "tracking_success": true
+    },
+    {
+      "scenario": "slope_straight",
+      "seed": 127004,
+      "steps": 1000,
+      "fell": false,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.05429477617144585,
+      "yaw_rmse": 0.06074173375964165,
+      "final_x": 8.615389823913574,
+      "initial_x": -1.3,
+      "final_y": 3.968290090560913,
+      "crossed_obstacles": true,
+      "tracking_success": true
+    },
+    {
+      "scenario": "slope_straight",
+      "seed": 127005,
+      "steps": 1000,
+      "fell": false,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.05423630028963089,
+      "yaw_rmse": 0.060650769621133804,
+      "final_x": 8.613697052001953,
+      "initial_x": -1.3,
+      "final_y": 3.952374219894409,
+      "crossed_obstacles": true,
+      "tracking_success": true
+    },
+    {
+      "scenario": "slope_turn",
+      "seed": 127006,
+      "steps": 806,
+      "fell": false,
+      "out_of_bounds": true,
+      "velocity_rmse": 0.059135034680366516,
+      "yaw_rmse": 0.06921608746051788,
+      "final_x": 6.583415985107422,
+      "initial_x": -1.3,
+      "final_y": 4.100802898406982,
+      "crossed_obstacles": true,
+      "tracking_success": false
+    },
+    {
+      "scenario": "slope_turn",
+      "seed": 127007,
+      "steps": 827,
+      "fell": false,
+      "out_of_bounds": true,
+      "velocity_rmse": 0.058390043675899506,
+      "yaw_rmse": 0.06807580590248108,
+      "final_x": 6.796703338623047,
+      "initial_x": -1.3,
+      "final_y": 4.101836204528809,
+      "crossed_obstacles": true,
+      "tracking_success": false
+    }
+  ],
+  "tracking_successes": 4,
+  "falls": 0,
+  "out_of_bounds": 4,
+  "protocol": "development",
+  "heading_feedback": false,
+  "terrain": "a1_course",
+  "horizon_steps": 1000,
+  "control_dt": 0.02,
+  "elapsed_s": 44.892080585999906,
+  "initial_joint_offset_rad": 0.03,
+  "backend": "gpu",
+  "env_config": {
+    "Kd": 0.8,
+    "Kp": 30.0,
+    "action_repeat": 1,
+    "action_scale": 0.5,
+    "command_config": {
+      "a": [
+        0.8,
+        0.2,
+        0.5
+      ],
+      "b": [
+        0.9,
+        0.25,
+        0.5
+      ]
+    },
+    "course_cmd_stop_probability": 0.1,
+    "course_cmd_vx": [
+      0.25,
+      0.65
+    ],
+    "course_cmd_yaw_max": 0.08,
+    "course_lane_y": [
+      -3.0,
+      0.0,
+      3.0
+    ],
+    "course_reset_x": [
+      -1.5,
+      5.8
+    ],
+    "ctrl_dt": 0.02,
+    "episode_length": 1000,
+    "history_len": 1,
+    "impl": "warp",
+    "naconmax": 768,
+    "njmax": 640,
+    "noise_config": {
+      "level": 0.0,
+      "scales": {
+        "gravity": 0.05,
+        "gyro": 0.2,
+        "joint_pos": 0.03,
+        "joint_vel": 1.5,
+        "linvel": 0.1
+      }
+    },
+    "pert_config": {
+      "enable": false,
+      "kick_durations": [
+        0.05,
+        0.2
+      ],
+      "kick_wait_times": [
+        1.0,
+        3.0
+      ],
+      "velocity_kick": [
+        0.0,
+        3.0
+      ]
+    },
+    "reset_xy_range": 0.5,
+    "reward_config": {
+      "max_foot_height": 0.1,
+      "scales": {
+        "action_rate": -0.01,
+        "ang_vel_xy": -0.05,
+        "dof_pos_limits": -1.0,
+        "energy": -0.001,
+        "feet_air_time": 0.3,
+        "feet_clearance": -0.5,
+        "feet_height": 0.0,
+        "feet_slip": -0.1,
+        "lin_vel_z": -0.5,
+        "orientation": -5.0,
+        "pose": 0.1,
+        "stand_still": -1.0,
+        "termination": -1.0,
+        "torques": -0.0002,
+        "tracking_ang_vel": 1.0,
+        "tracking_lin_vel": 3.0
+      },
+      "tracking_sigma": 0.1
+    },
+    "sim_dt": 0.004,
+    "soft_joint_pos_limit_factor": 0.95
+  },
+  "evaluator_sha256": "3720f3161ea4e7a624628fd6aaae1c8f09981b76bc8e9a145d186bcc39d49f0d",
+  "environment_sha256": "0599537eb7679eefe58927562f3a7a5d9c129af12b423621bcf7d2940f898a18",
+  "note": "Fixed physical stairs/ramp lanes. Success requires final x>=6m, whole 20s and remaining within lane. Exit safety x<=12m; obstacle ends x=5.8m. One training seed."
+}

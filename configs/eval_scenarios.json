@@ -1,0 +1,9 @@
+[
+  {"name":"nominal","parameters":[0.7,0.0,1.0],"command":[0.5,0.0,0.0]},
+  {"name":"heldout_low_friction","parameters":[0.25,0.0,1.0],"command":[0.5,0.0,0.0]},
+  {"name":"heldout_payload","parameters":[0.7,3.0,1.0],"command":[0.5,0.0,0.0]},
+  {"name":"heldout_weak_motor","parameters":[0.7,0.0,0.7],"command":[0.5,0.0,0.0]},
+  {"name":"heldout_combination","parameters":[0.25,3.0,0.7],"command":[0.5,0.0,0.0]},
+  {"name":"friction_switch","parameters":[0.7,0.0,1.0],"command":[0.5,0.0,0.0],"change_step":300,"after_parameters":[0.25,0.0,1.0]},
+  {"name":"lateral_push","parameters":[0.7,0.0,1.0],"command":[0.5,0.0,0.0],"push_step":300,"push_steps":5,"push_force":[0.0,40.0,0.0]}
+]

@@ -1,0 +1,14 @@
+[
+ {"name":"flat_reference","terrain":{"kind":"flat"},"command":[0.45,0,0]},
+ {"name":"speed_stop_resume","terrain":{"kind":"flat"},"command":[0.3,0,0],"command_schedule":[{"step":200,"command":[0.65,0,0]},{"step":450,"command":[0,0,0]},{"step":600,"command":[0.45,0,0]}]},
+ {"name":"turn_reversal","terrain":{"kind":"flat"},"command":[0.4,0,0],"command_schedule":[{"step":200,"command":[0.4,0,0.3]},{"step":450,"command":[0.4,0,-0.3]},{"step":700,"command":[0.4,0,0]}]},
+ {"name":"uphill_4deg","terrain":{"kind":"uphill","slope_degrees":4},"command":[0.4,0,0],"required_x":4.1},
+ {"name":"uphill_8deg","terrain":{"kind":"uphill","slope_degrees":8},"command":[0.4,0,0],"required_x":4.1},
+ {"name":"downhill_6deg","terrain":{"kind":"downhill","slope_degrees":6},"command":[0.4,0,0],"required_x":4.1},
+ {"name":"stairs_2cm","terrain":{"kind":"stairs","step_height":0.02,"step_width":0.4},"command":[0.35,0,0],"required_x":3.3},
+ {"name":"stairs_4cm","terrain":{"kind":"stairs","step_height":0.04,"step_width":0.4},"command":[0.35,0,0],"required_x":3.3},
+ {"name":"stairs_6cm_ood","terrain":{"kind":"stairs","step_height":0.06,"step_width":0.4},"command":[0.35,0,0],"required_x":3.3},
+ {"name":"rough_2cm","terrain":{"kind":"rough","amplitude":0.02,"phase":1.7},"command":[0.4,0,0],"required_x":4.1},
+ {"name":"rough_4cm_ood","terrain":{"kind":"rough","amplitude":0.04,"phase":1.7},"command":[0.4,0,0],"required_x":4.1},
+ {"name":"uphill_speed_change","terrain":{"kind":"uphill","slope_degrees":6},"command":[0.3,0,0],"required_x":4.1,"command_schedule":[{"step":250,"command":[0.55,0,0]},{"step":600,"command":[0.35,0,0]}]}
+]

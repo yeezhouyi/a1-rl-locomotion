@@ -1,0 +1,136 @@
+{
+  "arguments": {
+    "assets": "<GPU_WORKSPACE>/a1_assets_course_v2",
+    "out": "<GPU_WORKSPACE>/runs/course_train30m_s0_v3",
+    "batch": 512,
+    "steps": 30000000,
+    "minibatch_size": 64,
+    "seed": 0,
+    "restore": "<GPU_WORKSPACE>/runs/rough_wider_reset20m_s0_v2/checkpoints/000020029440",
+    "reset_range": 0.5,
+    "terrain": "course",
+    "reward_profile": "locomotion_v2"
+  },
+  "train": {
+    "num_timesteps": 30000000,
+    "num_evals": 3,
+    "num_envs": 512,
+    "num_eval_envs": 16,
+    "episode_length": 1000,
+    "action_repeat": 1,
+    "unroll_length": 20,
+    "num_minibatches": 8,
+    "num_updates_per_batch": 4,
+    "batch_size": 64,
+    "discounting": 0.97,
+    "learning_rate": 0.0003,
+    "entropy_cost": 0.01,
+    "normalize_observations": true,
+    "reward_scaling": 1.0,
+    "max_grad_norm": 1.0,
+    "num_resets_per_eval": 1
+  },
+  "env": {
+    "Kd": 0.8,
+    "Kp": 30.0,
+    "action_repeat": 1,
+    "action_scale": 0.5,
+    "command_config": {
+      "a": [
+        0.8,
+        0.2,
+        0.5
+      ],
+      "b": [
+        0.9,
+        0.25,
+        0.5
+      ]
+    },
+    "course_cmd_stop_probability": 0.1,
+    "course_cmd_vx": [
+      0.25,
+      0.65
+    ],
+    "course_cmd_yaw_max": 0.08,
+    "course_lane_y": [
+      -3.0,
+      0.0,
+      3.0
+    ],
+    "course_reset_x": [
+      -1.5,
+      5.8
+    ],
+    "ctrl_dt": 0.02,
+    "episode_length": 1000,
+    "history_len": 1,
+    "impl": "warp",
+    "naconmax": 49152,
+    "njmax": 640,
+    "noise_config": {
+      "level": 1.0,
+      "scales": {
+        "gravity": 0.05,
+        "gyro": 0.2,
+        "joint_pos": 0.03,
+        "joint_vel": 1.5,
+        "linvel": 0.1
+      }
+    },
+    "pert_config": {
+      "enable": false,
+      "kick_durations": [
+        0.05,
+        0.2
+      ],
+      "kick_wait_times": [
+        1.0,
+        3.0
+      ],
+      "velocity_kick": [
+        0.0,
+        3.0
+      ]
+    },
+    "reset_xy_range": 0.5,
+    "reward_config": {
+      "max_foot_height": 0.1,
+      "scales": {
+        "action_rate": -0.01,
+        "ang_vel_xy": -0.05,
+        "dof_pos_limits": -1.0,
+        "energy": -0.001,
+        "feet_air_time": 0.3,
+        "feet_clearance": -0.5,
+        "feet_height": 0.0,
+        "feet_slip": -0.1,
+        "lin_vel_z": -0.5,
+        "orientation": -5.0,
+        "pose": 0.1,
+        "stand_still": -1.0,
+        "termination": -1.0,
+        "torques": -0.0002,
+        "tracking_ang_vel": 1.0,
+        "tracking_lin_vel": 3.0
+      },
+      "tracking_sigma": 0.1
+    },
+    "sim_dt": 0.004,
+    "soft_joint_pos_limit_factor": 0.95
+  },
+  "backend": "gpu",
+  "versions": {
+    "jax": "0.8.2",
+    "mujoco": "3.15.0",
+    "mujoco-mjx": "3.15.0",
+    "brax": "0.14.2",
+    "warp-lang": "1.18.0"
+  },
+  "source_sha256": {
+    "train_gpu_a1.py": "cb539cb9365298fbb41fe63785dd86b07d21533838c13a458f673725f4dd4db6",
+    "gpu_a1_env.py": "454cbf50e9c1f78258cd7f2f7c6e55f27bf5f488f06480414cfc498dc97184f5",
+    "gpu_course_env.py": "0599537eb7679eefe58927562f3a7a5d9c129af12b423621bcf7d2940f898a18"
+  },
+  "note": "Single seed A1 task with inherited observations/reward formulas and configured reward weights/reset distribution; not original RMA. Restore reloads parameters/normalization but restarts optimizer."
+}

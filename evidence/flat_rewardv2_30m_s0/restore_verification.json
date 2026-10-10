@@ -1,0 +1,6 @@
+{
+  "checkpoint": "<GPU_WORKSPACE>/runs/flat_rewardv2_30m_s0/checkpoints/000030023680",
+  "max_action_absolute_error": 0.0,
+  "passed": true,
+  "observations": 8
+}

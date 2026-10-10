@@ -1,0 +1,199 @@
+{
+  "episodes": [
+    {
+      "scenario": "slow",
+      "seed": 116000,
+      "steps": 1000,
+      "fell": false,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.11317163705825806,
+      "yaw_rmse": 0.18047210574150085,
+      "tracking_success": true,
+      "final_x": 1.228426218032837,
+      "initial_x": -2.0399999618530273,
+      "final_y": 0.3529527187347412
+    },
+    {
+      "scenario": "slow",
+      "seed": 116001,
+      "steps": 251,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.2983304262161255,
+      "yaw_rmse": 0.45355695486068726,
+      "tracking_success": false,
+      "final_x": -1.7082620859146118,
+      "initial_x": -2.028571367263794,
+      "final_y": 0.35174062848091125
+    },
+    {
+      "scenario": "fast",
+      "seed": 116002,
+      "steps": 197,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.4365605115890503,
+      "yaw_rmse": 0.44511881470680237,
+      "tracking_success": false,
+      "final_x": -1.1983329057693481,
+      "initial_x": -2.0171427726745605,
+      "final_y": 0.334513396024704
+    },
+    {
+      "scenario": "fast",
+      "seed": 116003,
+      "steps": 40,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.7898545861244202,
+      "yaw_rmse": 0.6995702981948853,
+      "tracking_success": false,
+      "final_x": -2.0091888904571533,
+      "initial_x": -2.005714178085327,
+      "final_y": -0.42111364006996155
+    },
+    {
+      "scenario": "stop_resume",
+      "seed": 116004,
+      "steps": 47,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.6469815969467163,
+      "yaw_rmse": 0.5066779255867004,
+      "tracking_success": false,
+      "final_x": -2.0483875274658203,
+      "initial_x": -1.9942857027053833,
+      "final_y": -0.39691397547721863
+    },
+    {
+      "scenario": "stop_resume",
+      "seed": 116005,
+      "steps": 114,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.39787083864212036,
+      "yaw_rmse": 0.5888112187385559,
+      "tracking_success": false,
+      "final_x": -1.5518839359283447,
+      "initial_x": -1.98285710811615,
+      "final_y": -0.4404948353767395
+    },
+    {
+      "scenario": "turn_reversal",
+      "seed": 116006,
+      "steps": 478,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.21649211645126343,
+      "yaw_rmse": 0.38160982728004456,
+      "tracking_success": false,
+      "final_x": -0.1397712528705597,
+      "initial_x": -1.9714285135269165,
+      "final_y": -0.6019589304924011
+    },
+    {
+      "scenario": "turn_reversal",
+      "seed": 116007,
+      "steps": 250,
+      "fell": true,
+      "out_of_bounds": false,
+      "velocity_rmse": 0.2785918116569519,
+      "yaw_rmse": 0.24086982011795044,
+      "tracking_success": false,
+      "final_x": -0.9577381014823914,
+      "initial_x": -1.9600000381469727,
+      "final_y": 0.3969881534576416
+    }
+  ],
+  "tracking_successes": 1,
+  "falls": 7,
+  "elapsed_s": 40.76872722999997,
+  "backend": "gpu",
+  "devices": [
+    "cuda:0"
+  ],
+  "horizon_steps": 1000,
+  "control_dt": 0.02,
+  "terrain": "a1_rough",
+  "evaluator_sha256": "a3eebeb5e4476ec2af4cee659836a9c42f61ea8dedd58e59adad979518e07c7c",
+  "initial_joint_offset_rad": 0.03,
+  "protocol": "spatial_holdout",
+  "out_of_bounds": 0,
+  "origin_x": -2.0,
+  "env_config": {
+    "Kd": 0.8,
+    "Kp": 30.0,
+    "action_repeat": 1,
+    "action_scale": 0.5,
+    "command_config": {
+      "a": [
+        0.8,
+        0.2,
+        0.5
+      ],
+      "b": [
+        0.9,
+        0.25,
+        0.5
+      ]
+    },
+    "ctrl_dt": 0.02,
+    "episode_length": 1000,
+    "history_len": 1,
+    "impl": "warp",
+    "naconmax": 384,
+    "njmax": 320,
+    "noise_config": {
+      "level": 0.0,
+      "scales": {
+        "gravity": 0.05,
+        "gyro": 0.2,
+        "joint_pos": 0.03,
+        "joint_vel": 1.5,
+        "linvel": 0.1
+      }
+    },
+    "pert_config": {
+      "enable": false,
+      "kick_durations": [
+        0.05,
+        0.2
+      ],
+      "kick_wait_times": [
+        1.0,
+        3.0
+      ],
+      "velocity_kick": [
+        0.0,
+        3.0
+      ]
+    },
+    "reset_xy_range": 0.5,
+    "reward_config": {
+      "max_foot_height": 0.1,
+      "scales": {
+        "action_rate": -0.01,
+        "ang_vel_xy": -0.05,
+        "dof_pos_limits": -1.0,
+        "energy": -0.001,
+        "feet_air_time": 0.3,
+        "feet_clearance": -0.5,
+        "feet_height": -0.2,
+        "feet_slip": -0.1,
+        "lin_vel_z": -0.5,
+        "orientation": -5.0,
+        "pose": 0.1,
+        "stand_still": -1.0,
+        "termination": -1.0,
+        "torques": -0.0002,
+        "tracking_ang_vel": 1.0,
+        "tracking_lin_vel": 3.0
+      },
+      "tracking_sigma": 0.1
+    },
+    "sim_dt": 0.004,
+    "soft_joint_pos_limit_factor": 0.95
+  },
+  "environment_sha256": "60bb63fd3c3456685b811fedc420c40d29dad24081a5fbaefaf6c55b948e2cc9",
+  "note": "8 fixed evaluation episodes with seed-specific initial joint offsets, one trained seed; GPU physics. Independent command schedule, no automatic resets. Fall adds height<0.14m to upstream flip termination."
+}
